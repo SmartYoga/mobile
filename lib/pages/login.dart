@@ -84,13 +84,14 @@ class _LoginPageState extends State<LoginPage> {
 
                   SizedBox(height: 20),
 
+                  // Кнопка Войти
                   Container(
                     alignment: Alignment.center,
                     child: RaisedButton(
                         padding:
                             EdgeInsets.symmetric(vertical: 30, horizontal: 110),
                         color: Colors.white,
-                        textColor: Colors.white,
+                        textColor: Colors.black,
                         shape: RoundedRectangleBorder(
                             borderRadius: new BorderRadius.circular(30.0)),
                         onPressed: () {
@@ -100,8 +101,23 @@ class _LoginPageState extends State<LoginPage> {
                                 builder: (context) => StartPage()),
                           );
                         },
-                        child: Text("Войти",
-                            style: TextStyle(color: Colors.black))),
+                        child: Text("Войти")),
+                  ),
+                  SizedBox(height: 10),
+                  // Кнопка регистрации
+                  Container(
+                    alignment: Alignment.center,
+                    child: RaisedButton(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 30, horizontal: 90),
+                        color: Colors.white,
+                        textColor: Colors.black,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(30.0)),
+                        onPressed: () {
+                          /* */
+                        },
+                        child: Text("Регистрация")),
                   ),
                 ],
               ),
