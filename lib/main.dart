@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'SmartYoga App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           //#96d4ef
           // primarySwatch: Colors.blue,

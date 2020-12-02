@@ -1,16 +1,9 @@
-# mobile
+# Обновление почти каждый день
+Flutter project.
+## Скрины экранов:
 
-A new Flutter project.
+### Login Screen
+![alt text](https://sun9-33.userapi.com/impg/4MMC-6zviClQxtf8mGIhUqpi9AFmBkYBhjkEPA/aG0MZ5iS-_w.jpg?size=329x651&quality=96&proxy=1&sign=f702ef8c797e998781a7d7c75005040d)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Home Screen
+![alt text](https://sun9-46.userapi.com/impg/71DZIwvzsu8RfmGqryf_66F8Hor9kdrayqPWLQ/VbrE_GASBtQ.jpg?size=381x676&quality=96&proxy=1&sign=285e2bc3f210408fd82e1defd1077576)
