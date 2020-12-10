@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:mobile/pages/chat.dart';
 import 'package:mobile/pages/start.dart';
-import 'package:mobile/pages/login.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,9 +9,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'SmartYoga App',
-      debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      title: 'Bottom Navigation Bar',
+      home: MyHomePage(),
     );
   }
 }
@@ -40,30 +38,18 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         bottomNavigationBar: new BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          backgroundColor: Color(0xFFF57600),
+          backgroundColor: Color(0xFF96D4EF),
           unselectedItemColor: Colors.white,
-          selectedIconTheme: IconThemeData(color: Colors.blue[300]),
+          selectedIconTheme: IconThemeData(color: Colors.white30),
           selectedLabelStyle: TextStyle(color: Colors.blue[100]),
           selectedItemColor: Colors.white,
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: new Image.asset('assets/video.png',
-                  width: 30, height: 30, fit: BoxFit.contain),
-              label: "Dialogue",
-              backgroundColor: Colors.red,
-            ),
+                icon: Icon(Icons.person, size: 35), label: "Профиль"),
             BottomNavigationBarItem(
-                icon: new Image.asset('assets/logo.png',
-                    width: 35, height: 35, fit: BoxFit.cover),
-                label: "Inspeak"),
+                icon: Icon(Icons.directions_run, size: 35), label: "Занятия"),
             BottomNavigationBarItem(
-                icon: new Image.asset('assets/messenger.png',
-                    width: 30, height: 30, fit: BoxFit.contain),
-                label: "Messenger"),
-            BottomNavigationBarItem(
-                icon: new Image.asset('assets/user.png',
-                    width: 30, height: 30, fit: BoxFit.contain),
-                label: "Profile"),
+                icon: Icon(Icons.message, size: 35), label: "Чат"),
           ],
           currentIndex: _seletedItem,
           onTap: (index) {

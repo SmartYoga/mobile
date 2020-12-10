@@ -8,7 +8,7 @@ class WorkoutScreen extends StatelessWidget {
     final today = DateTime.now();
 
     return Scaffold(
-      backgroundColor: const Color(0xFF200087),
+      backgroundColor: const Color(0xFF96D4EF),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(
@@ -20,6 +20,7 @@ class WorkoutScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 16.0),
                 child: IconButton(
+                  alignment: Alignment.center,
                   icon: Icon(
                     Icons.close,
                     color: Colors.white,
@@ -31,7 +32,7 @@ class WorkoutScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 15,
               ),
               ListTile(
                 title: Text(
@@ -43,7 +44,7 @@ class WorkoutScreen extends StatelessWidget {
                   ),
                 ),
                 subtitle: Text(
-                  "Upper Body",
+                  "Рекомендации",
                   style: TextStyle(
                     fontWeight: FontWeight.w800,
                     fontSize: 24,
@@ -61,7 +62,7 @@ class WorkoutScreen extends StatelessWidget {
                           color: Colors.white30,
                         ),
                         SizedBox(
-                          width: 5,
+                          width: 10,
                         ),
                         Text(
                           "60 mins",
@@ -71,9 +72,6 @@ class WorkoutScreen extends StatelessWidget {
                               fontSize: 16),
                         )
                       ],
-                    ),
-                    SizedBox(
-                      height: 4,
                     ),
                     Row(
                       mainAxisSize: MainAxisSize.min,
@@ -86,7 +84,7 @@ class WorkoutScreen extends StatelessWidget {
                           width: 5,
                         ),
                         Text(
-                          "Easy",
+                          "Легко",
                           style: TextStyle(
                               color: Colors.white70,
                               fontWeight: FontWeight.w600,

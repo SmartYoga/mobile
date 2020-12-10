@@ -15,52 +15,7 @@ class ProfileScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: const Color(0xFFE9E9E9),
-      bottomNavigationBar: ClipRRect(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(40)),
-        child: BottomNavigationBar(
-          iconSize: 40,
-          selectedIconTheme: IconThemeData(
-            color: const Color(0xFF96D4EF),
-          ),
-          unselectedIconTheme: IconThemeData(
-            color: Colors.black12,
-          ),
-          items: [
-            BottomNavigationBarItem(
-              icon: Padding(
-                padding: const EdgeInsets.only(top: 8.0),
-                child: Icon(Icons.person),
-              ),
-              title: Text(
-                "Профиль",
-                style: const TextStyle(color: Colors.grey),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Padding(
-                child: Icon(Icons.directions_run),
-                padding: const EdgeInsets.only(top: 8.0),
-              ),
-              title: Text(
-                "Тренеровки",
-                style: const TextStyle(color: Colors.grey),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Padding(
-                child: Icon(Icons.person),
-                padding: const EdgeInsets.only(top: 8.0),
-              ),
-              title: Text(
-                "Чат",
-                style: const TextStyle(color: Colors.grey),
-              ),
-            ),
-          ],
-        ),
-      ),
       body: SingleChildScrollView(
-        // <-- wrap this around
         child: Column(
           children: <Widget>[
             Positioned(
@@ -118,7 +73,7 @@ class ProfileScreen extends StatelessWidget {
                             progress: 0.7,
                           ),
                           SizedBox(
-                            width: 5,
+                            width: 10,
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -257,13 +212,12 @@ class ProfileScreen extends StatelessWidget {
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(25)),
-                                            color: const Color(0xFFE9E9E9),
+                                            color: const Color(0xFFA4F2C1),
                                           ),
                                           padding: const EdgeInsets.all(10),
-                                          child: Image.asset(
-                                            "assets/chest.png",
-                                            width: 50,
-                                            height: 50,
+                                          child: Icon(
+                                            Icons.directions_run,
+                                            size: 35,
                                             color: Colors.white,
                                           ),
                                         ),
@@ -274,13 +228,12 @@ class ProfileScreen extends StatelessWidget {
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(25)),
-                                            color: const Color(0xFFE9E9E9),
+                                            color: const Color(0xFFA4F2C1),
                                           ),
                                           padding: const EdgeInsets.all(10),
-                                          child: Image.asset(
-                                            "assets/back.png",
-                                            width: 50,
-                                            height: 50,
+                                          child: Icon(
+                                            Icons.auto_awesome,
+                                            size: 35,
                                             color: Colors.white,
                                           ),
                                         ),
@@ -291,13 +244,12 @@ class ProfileScreen extends StatelessWidget {
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(25)),
-                                            color: const Color(0xFFE9E9E9),
+                                            color: const Color(0xFFA4F2C1),
                                           ),
                                           padding: const EdgeInsets.all(10),
-                                          child: Image.asset(
-                                            "assets/biceps.png",
-                                            width: 50,
-                                            height: 50,
+                                          child: Icon(
+                                            Icons.accessibility_new,
+                                            size: 35,
                                             color: Colors.white,
                                           ),
                                         ),
@@ -535,7 +487,7 @@ class _MealCard extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "${meal.kiloCaloriesBurnt} kcal",
+                      "${meal.coach} тренер",
                       style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 14,

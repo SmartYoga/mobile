@@ -8,69 +8,69 @@ final upperBody = [
   [
     UpperBodyWorkout(
       imagePath: "assets/chest.png",
-      name: "Bench press",
-      instruction: "3 sets - 6 repitions",
+      name: "Жим",
+      instruction: "3 сета - 6 повторения",
     ),
     UpperBodyWorkout(
       imagePath: "assets/chest.png",
-      name: "Dumbell press",
-      instruction: "4 sets - 6 repitions",
+      name: "Гантели",
+      instruction: "4 сета1 - 6 повторения",
     ),
     UpperBodyWorkout(
       imagePath: "assets/chest.png",
-      name: "Dips",
-      instruction: "2 sets - 10 repitions",
+      name: "Отжимания",
+      instruction: "2 сета - 10 повторения",
     ),
   ],
   [
     UpperBodyWorkout(
       imagePath: "assets/back.png",
-      name: "Pull ups",
-      instruction: "2 sets - 8 repitions",
+      name: "Подтягивания",
+      instruction: "2 сета - 8 повторения",
     ),
     UpperBodyWorkout(
       imagePath: "assets/back.png",
-      name: "Deadlift",
-      instruction: "2 sets - 4 repitions",
+      name: "Тяга",
+      instruction: "2 сета - 4 повторения",
     ),
     UpperBodyWorkout(
       imagePath: "assets/back.png",
-      name: "Lat pulldown",
-      instruction: "4 sets - 6 repitions",
+      name: "Тяга верхнего блока",
+      instruction: "4 сета - 6 повторения",
     ),
   ],
   [
     UpperBodyWorkout(
       imagePath: "assets/chest.png",
-      name: "Bench press",
-      instruction: "3 sets - 6 repitions",
+      name: "Жим лёжа",
+      instruction: "3 сета - 6 повторения",
     ),
     UpperBodyWorkout(
       imagePath: "assets/chest.png",
-      name: "Dumbell press",
-      instruction: "4 sets - 6 repitions",
+      name: "Пресс",
+      instruction: "4 сета - 6 повторения",
     ),
     UpperBodyWorkout(
       imagePath: "assets/chest.png",
-      name: "Dips",
-      instruction: "2 sets - 10 repitions",
+      name: "Отжимания",
+      instruction: "2 сета - 10 повторения",
     ),
   ],
   [
     UpperBodyWorkout(
       imagePath: "assets/back.png",
-      name: "Pull ups",
-      instruction: "2 sets - 8 repitions",
+      name: "Прыжки",
+      instruction: "2 сета - 8 повторения",
     ),
     UpperBodyWorkout(
       imagePath: "assets/back.png",
-      name: "Deadlift",
-      instruction: "2 sets - 4 repitions",
+      name: "Тяга",
+      instruction: "2 сета - 4 повторения",
     ),
     UpperBodyWorkout(
       imagePath: "assets/back.png",
-      name: "Lat pulldown",
-      instruction: "4 sets - 6 repitions",
+      name: "Пресс",
+      instruction: "4 сета - 6 повторения",
     ),
   ],
 ];

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/pages/navBar.dart';
 import 'package:mobile/pages/start.dart';
 
 class LoginPage extends StatefulWidget {
@@ -98,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ProfileScreen()),
+                                builder: (context) => MyHomePage()),
                           );
                         },
                         child: Text("Войти")),

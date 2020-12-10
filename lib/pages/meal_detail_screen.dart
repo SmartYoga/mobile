@@ -63,7 +63,7 @@ class MealDetailScreen extends StatelessWidget {
                             width: 30,
                           ),
                           Text(
-                            "${meal.kiloCaloriesBurnt} kcal",
+                            "${meal.coach} тренер",
                             style: TextStyle(
                                 color: Colors.grey,
                                 fontWeight: FontWeight.w600,
@@ -71,18 +71,12 @@ class MealDetailScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 4,
-                      ),
                       Row(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
                           Icon(
                             Icons.access_time,
                             color: Colors.grey,
-                          ),
-                          SizedBox(
-                            width: 5,
                           ),
                           Text(
                             "${meal.timeTaken} mins",
@@ -97,12 +91,12 @@ class MealDetailScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Text(
-                    "INGREDIENTS",
+                    "Выполнение",
                     style: TextStyle(
                       fontWeight: FontWeight.w800,
                       fontSize: 14,
@@ -139,7 +133,7 @@ class MealDetailScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Text(
-                    "PREPARATION",
+                    "Описание",
                     style: TextStyle(
                       fontWeight: FontWeight.w800,
                       fontSize: 14,
