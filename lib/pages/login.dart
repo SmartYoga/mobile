@@ -98,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => StartPage()),
+                                builder: (context) => ProfileScreen()),
                           );
                         },
                         child: Text("Войти")),
