@@ -5,9 +5,11 @@ import 'package:mobile/pages/chatScreen.dart';
 class RecentChats extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Padding(
+      padding: EdgeInsets.all(0),
       child: Container(
         margin: EdgeInsets.all(1.0),
+        color: Color(0xFFE9E9E9),
         child: ClipRRect(
           child: ListView.builder(
             itemCount: chats.length,
