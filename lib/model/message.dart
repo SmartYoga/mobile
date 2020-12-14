@@ -77,7 +77,7 @@ List<Message> chats = [
   Message(
     sender: id4,
     time: '2:30 PM',
-    text: 'Ну как там с деньгами',
+    text: 'Блеск. Жду тебя завтра)',
   ),
   Message(
     sender: id5,
@@ -101,31 +101,31 @@ List<Message> messages = [
   Message(
     sender: id1,
     time: '5:30 PM',
-    text: 'Я кто',
+    text: 'Блеск. Жду тебя завтра)',
   ),
   Message(
     sender: currentUser,
     time: '4:30 PM',
-    text: 'Что да',
+    text: 'А у тебя как?',
   ),
   Message(
-    sender: id1,
+    sender: currentUser,
     time: '3:45 PM',
-    text: 'Да',
+    text: 'Просто отлично, жду следующего занатия))',
   ),
   Message(
     sender: id1,
     time: '3:15 PM',
-    text: 'Ы. ',
+    text: 'Как прошла тренеровка?',
   ),
   Message(
     sender: currentUser,
     time: '2:30 PM',
-    text: 'Тык',
+    text: 'Привет',
   ),
   Message(
     sender: id1,
     time: '2:00 PM',
-    text: 'ДРУГ как дела?',
+    text: 'Привет!',
   ),
 ];

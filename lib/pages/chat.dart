@@ -6,10 +6,9 @@ class RecentChats extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(0),
+      padding: EdgeInsets.only(top: 35),
       child: Container(
         margin: EdgeInsets.all(1.0),
-        color: Color(0xFFE9E9E9),
         child: ClipRRect(
           child: ListView.builder(
             itemCount: chats.length,
@@ -26,9 +25,13 @@ class RecentChats extends StatelessWidget {
                 ),
                 child: Container(
                   padding:
-                      EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+                      EdgeInsets.symmetric(horizontal: 10.0, vertical: 15.0),
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Color(0xFFC7E4F0),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30.0),
+                      bottomRight: Radius.circular(30.0),
+                    ),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -36,7 +39,7 @@ class RecentChats extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           CircleAvatar(
-                            backgroundColor: Colors.black,
+                            backgroundColor: Color(0xFF777777),
                             radius: 25.0,
                             backgroundImage: AssetImage(chat.sender.imageUrl),
                           ),

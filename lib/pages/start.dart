@@ -15,13 +15,13 @@ class ProfileScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: const Color(0xFFE9E9E9),
-      body: Stack(
-        children: [
-          SingleChildScrollView(
-            child: Padding(
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            Padding(
               padding: EdgeInsets.only(top: height * 0.4),
               child: Container(
-                height: height * 0.65,
+                height: height * 0.55,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -170,105 +170,106 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
             ),
-          ),
-          Positioned(
-            top: 0,
-            height: height * 0.4,
-            left: 0,
-            right: 0,
-            child: ClipRRect(
-              borderRadius: const BorderRadius.vertical(
-                bottom: const Radius.circular(40),
-              ),
-              child: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      const Color(0xFFA4F2C1),
-                      const Color(0xFF96D4EF),
+            Positioned(
+              top: 0,
+              height: height * 0.4,
+              left: 0,
+              right: 0,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.vertical(
+                  bottom: const Radius.circular(40),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        const Color(0xFFA4F2C1),
+                        const Color(0xFF96D4EF),
+                      ],
+                    ),
+                  ),
+                  padding: const EdgeInsets.only(
+                      top: 30, left: 32, right: 16, bottom: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      ListTile(
+                        title: Text(
+                          "${DateFormat("EEEE").format(today)}, ${DateFormat("d MMMM").format(today)}",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 18,
+                          ),
+                        ),
+                        subtitle: Text(
+                          "Привет, Катя",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 26,
+                            color: Colors.black,
+                          ),
+                        ),
+                        trailing:
+                            ClipOval(child: Image.asset("assets/user.jpg")),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: <Widget>[
+                          _RadialProgress(
+                            width: height * 0.2,
+                            height: height * 0.2,
+                            progress: 0.7,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              _IngredientProgress(
+                                ingredient: "Белки",
+                                progress: 0.3,
+                                progressColor: Colors.green,
+                                leftAmount: 72,
+                                width: width * 0.28,
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              _IngredientProgress(
+                                ingredient: "Углеводы",
+                                progress: 0.2,
+                                progressColor: Colors.red,
+                                leftAmount: 252,
+                                width: width * 0.28,
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              _IngredientProgress(
+                                ingredient: "Жиры",
+                                progress: 0.1,
+                                progressColor: Colors.yellow,
+                                leftAmount: 61,
+                                width: width * 0.28,
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
                     ],
                   ),
                 ),
-                padding: const EdgeInsets.only(
-                    top: 30, left: 32, right: 16, bottom: 10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    ListTile(
-                      title: Text(
-                        "${DateFormat("EEEE").format(today)}, ${DateFormat("d MMMM").format(today)}",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 18,
-                        ),
-                      ),
-                      subtitle: Text(
-                        "Привет, Катя",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w800,
-                          fontSize: 26,
-                          color: Colors.black,
-                        ),
-                      ),
-                      trailing: ClipOval(child: Image.asset("assets/user.jpg")),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      children: <Widget>[
-                        _RadialProgress(
-                          width: height * 0.2,
-                          height: height * 0.2,
-                          progress: 0.7,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          mainAxisSize: MainAxisSize.max,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            _IngredientProgress(
-                              ingredient: "Белки",
-                              progress: 0.3,
-                              progressColor: Colors.green,
-                              leftAmount: 72,
-                              width: width * 0.28,
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            _IngredientProgress(
-                              ingredient: "Углеводы",
-                              progress: 0.2,
-                              progressColor: Colors.red,
-                              leftAmount: 252,
-                              width: width * 0.28,
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            _IngredientProgress(
-                              ingredient: "Жиры",
-                              progress: 0.1,
-                              progressColor: Colors.yellow,
-                              leftAmount: 61,
-                              width: width * 0.28,
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ],
-                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -357,20 +358,29 @@ class _RadialProgress extends StatelessWidget {
             text: TextSpan(
               children: [
                 TextSpan(
-                  text: "1731",
+                  text: "осталось сжечь",
                   style: TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.w700,
-                    color: const Color(0xFF200087),
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                    color: const Color(0xFF1D1D1D),
                   ),
                 ),
                 TextSpan(text: "\n"),
                 TextSpan(
-                  text: "kcal left",
+                  text: "1731",
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 25,
+                    fontWeight: FontWeight.w700,
+                    color: const Color(0xFF1D1D1D),
+                  ),
+                ),
+                TextSpan(text: "\n"),
+                TextSpan(
+                  text: "ККАЛ",
+                  style: TextStyle(
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
-                    color: const Color(0xFF200087),
+                    color: const Color(0xFF1D1D1D),
                   ),
                 ),
               ],
@@ -391,7 +401,7 @@ class _RadialPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint()
       ..strokeWidth = 10
-      ..color = Color(0xFF200087)
+      ..color = Color(0xFF26A88A)
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round;
 
@@ -466,7 +476,6 @@ class _MealCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SizedBox(height: 5),
                     Text(
                       meal.mealTime,
                       style: const TextStyle(
