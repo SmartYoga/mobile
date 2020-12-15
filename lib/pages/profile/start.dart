@@ -2,8 +2,8 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:mobile/model/meal.dart';
-import 'package:mobile/pages/meal_detail_screen.dart';
-import 'package:mobile/pages/workout_screen.dart';
+import 'package:mobile/pages/profile/meal_detail_screen.dart';
+import 'package:mobile/pages/profile/workout_screen.dart';
 import 'package:vector_math/vector_math_64.dart' as math;
 
 class ProfileScreen extends StatelessWidget {
@@ -75,96 +75,55 @@ class ProfileScreen extends StatelessWidget {
                               margin:
                                   const EdgeInsets.only(left: 32, right: 32),
                               decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(30)),
-                                gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    const Color(0xFFA4F2C1),
-                                    const Color(0xFF96D4EF),
-                                  ],
-                                ),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: <Widget>[
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 15.0),
-                                    child: Text(
-                                      "Ваши рекомндации",
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(30)),
+                                  color: Color(0xFFF8F8F8),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        offset: Offset(0, 3),
+                                        blurRadius: 10,
+                                        color: Color(0xFFFFFFFF))
+                                  ]),
+                              child: Expanded(
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: <Widget>[
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(25)),
+                                        color: const Color(0xFFA4F2C1),
+                                      ),
+                                      padding: const EdgeInsets.all(10),
+                                      child: Icon(
+                                        Icons.auto_awesome,
+                                        size: 35,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    Text(
+                                      "Ваши рекомндации\nЕжедневно обновляются!",
                                       style: TextStyle(
                                         color: Colors.black54,
                                         fontSize: 16,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
-                                  ),
-                                  Expanded(
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      children: <Widget>[
-                                        SizedBox(
-                                          width: 20,
-                                        ),
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
-                                            color: const Color(0xFFA4F2C1),
-                                          ),
-                                          padding: const EdgeInsets.all(10),
-                                          child: Icon(
-                                            Icons.directions_run,
-                                            size: 35,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
-                                            color: const Color(0xFFA4F2C1),
-                                          ),
-                                          padding: const EdgeInsets.all(10),
-                                          child: Icon(
-                                            Icons.auto_awesome,
-                                            size: 35,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(25)),
-                                            color: const Color(0xFFA4F2C1),
-                                          ),
-                                          padding: const EdgeInsets.all(10),
-                                          child: Icon(
-                                            Icons.accessibility_new,
-                                            size: 35,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
+                                    Icon(
+                                      Icons.arrow_forward_ios,
+                                      color: Colors.black54,
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           );
                         },
                       ),
+                    ),
+                    SizedBox(
+                      height: 20,
                     ),
                   ],
                 ),
@@ -225,7 +184,7 @@ class ProfileScreen extends StatelessWidget {
                             progress: 0.7,
                           ),
                           SizedBox(
-                            width: 10,
+                            width: 15,
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -237,7 +196,7 @@ class ProfileScreen extends StatelessWidget {
                                 progress: 0.3,
                                 progressColor: Colors.green,
                                 leftAmount: 72,
-                                width: width * 0.28,
+                                width: width * 0.23,
                               ),
                               SizedBox(
                                 height: 5,
@@ -247,7 +206,7 @@ class ProfileScreen extends StatelessWidget {
                                 progress: 0.2,
                                 progressColor: Colors.red,
                                 leftAmount: 252,
-                                width: width * 0.28,
+                                width: width * 0.23,
                               ),
                               SizedBox(
                                 height: 5,
@@ -257,7 +216,7 @@ class ProfileScreen extends StatelessWidget {
                                 progress: 0.1,
                                 progressColor: Colors.yellow,
                                 leftAmount: 61,
-                                width: width * 0.28,
+                                width: width * 0.23,
                               ),
                             ],
                           )
@@ -327,9 +286,9 @@ class _IngredientProgress extends StatelessWidget {
               ],
             ),
             SizedBox(
-              width: 10,
+              width: 5,
             ),
-            Text("${leftAmount}g left"),
+            Text("${leftAmount} грамм"),
           ],
         ),
       ],
@@ -367,7 +326,7 @@ class _RadialProgress extends StatelessWidget {
                 ),
                 TextSpan(text: "\n"),
                 TextSpan(
-                  text: "1731",
+                  text: "1691",
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w700,
@@ -489,7 +448,7 @@ class _MealCard extends StatelessWidget {
                       style: const TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 18,
-                        color: Colors.black,
+                        color: Colors.black54,
                       ),
                     ),
                     Text(

@@ -59,7 +59,7 @@ class WorkoutScreen extends StatelessWidget {
                       children: <Widget>[
                         Icon(
                           Icons.access_time,
-                          color: Colors.white30,
+                          color: Colors.white38,
                         ),
                         SizedBox(
                           width: 10,
@@ -78,7 +78,7 @@ class WorkoutScreen extends StatelessWidget {
                       children: <Widget>[
                         Icon(
                           Icons.shutter_speed,
-                          color: Colors.white30,
+                          color: Colors.white38,
                         ),
                         SizedBox(
                           width: 5,
@@ -128,7 +128,7 @@ class WorkoutScreen extends StatelessWidget {
                           upperBody[i][j].instruction,
                           style: TextStyle(
                             color: Colors.white70,
-                            fontSize: 14,
+                            fontSize: 18,
                             fontWeight: FontWeight.w400,
                           ),
                         ),

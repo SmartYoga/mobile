@@ -62,17 +62,17 @@ List<Message> chats = [
   Message(
     sender: id1,
     time: '5:30 PM',
-    text: 'Привет ДРУГ, как дела',
+    text: 'Ух, устала сегодня',
   ),
   Message(
     sender: id2,
     time: '4:30 PM',
-    text: 'Замечания в файле',
+    text: 'Жду завтра в 13:00',
   ),
   Message(
     sender: id3,
     time: '3:30 PM',
-    text: 'Курлык',
+    text: 'Большое спасибо',
   ),
   Message(
     sender: id4,
@@ -82,12 +82,12 @@ List<Message> chats = [
   Message(
     sender: id5,
     time: '1:30 PM',
-    text: 'ы',
+    text: 'Ура, я в интернете',
   ),
   Message(
     sender: id6,
     time: '12:30 PM',
-    text: ')))))))))))))))))))))))))))))))))',
+    text: 'Мда',
   ),
   Message(
     sender: id7,

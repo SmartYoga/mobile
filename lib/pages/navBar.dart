@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:mobile/pages/chat.dart';
-import 'package:mobile/pages/start.dart';
+import 'package:mobile/pages/chat/chat.dart';
+import 'package:mobile/pages/profile/start.dart';
+import 'package:mobile/pages/workout/workout.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,7 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _seletedItem = 0;
   var _pages = [
     ProfileScreen(),
-    ProfileScreen(),
+    WorkoutPage(),
     RecentChats(),
   ];
 
