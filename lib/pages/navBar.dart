@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
           type: BottomNavigationBarType.fixed,
           backgroundColor: Color(0xFF96D4EF),
           unselectedItemColor: Colors.white,
-          selectedIconTheme: IconThemeData(color: Colors.white30),
+          selectedIconTheme: IconThemeData(color: Colors.white38),
           selectedLabelStyle: TextStyle(color: Colors.blue[100]),
           selectedItemColor: Colors.white,
           items: <BottomNavigationBarItem>[

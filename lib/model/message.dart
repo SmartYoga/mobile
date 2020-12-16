@@ -16,15 +16,15 @@ class Message {
 // YOU - current user
 final User currentUser = User(
   id: 0,
-  name: 'Current User',
-  imageUrl: 'assets/id0.jpg',
+  name: 'Катя',
+  imageUrl: 'assets/pelevin.jpg',
 );
 
 // USERS
 final User id1 = User(
   id: 1,
   name: 'Петя',
-  imageUrl: 'assets/id0.jpg',
+  imageUrl: '',
 );
 final User id2 = User(
   id: 2,

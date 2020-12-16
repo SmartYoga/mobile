@@ -2,6 +2,7 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:mobile/model/meal.dart';
+import 'package:mobile/model/message.dart';
 import 'package:mobile/pages/profile/meal_detail_screen.dart';
 import 'package:mobile/pages/profile/workout_screen.dart';
 import 'package:vector_math/vector_math_64.dart' as math;
@@ -45,6 +46,14 @@ class ProfileScreen extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         child: Row(
                           children: <Widget>[
+                            Align(
+                              alignment: Alignment(0.8, -1.0),
+                              heightFactor: 0.5,
+                              child: FloatingActionButton(
+                                onPressed: null,
+                                child: Icon(Icons.add),
+                              ),
+                            ),
                             SizedBox(
                               width: 32,
                             ),
@@ -82,7 +91,7 @@ class ProfileScreen extends StatelessWidget {
                                     BoxShadow(
                                         offset: Offset(0, 3),
                                         blurRadius: 10,
-                                        color: Color(0xFFFFFFFF))
+                                        color: Color(0xFFB3B3B3))
                                   ]),
                               child: Expanded(
                                 child: Row(
@@ -91,9 +100,17 @@ class ProfileScreen extends StatelessWidget {
                                   children: <Widget>[
                                     Container(
                                       decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          begin: Alignment.topCenter,
+                                          end: Alignment.bottomCenter,
+                                          colors: [
+                                            const Color(0xFFA4F2C1),
+                                            const Color(0xFF96D4EF),
+                                          ],
+                                        ),
                                         borderRadius: BorderRadius.all(
-                                            Radius.circular(25)),
-                                        color: const Color(0xFFA4F2C1),
+                                          Radius.circular(25),
+                                        ),
                                       ),
                                       padding: const EdgeInsets.all(10),
                                       child: Icon(
@@ -163,15 +180,18 @@ class ProfileScreen extends StatelessWidget {
                           ),
                         ),
                         subtitle: Text(
-                          "Привет, Катя",
+                          "Привет, ${currentUser.name}",
                           style: TextStyle(
                             fontWeight: FontWeight.w800,
                             fontSize: 26,
                             color: Colors.black,
                           ),
                         ),
-                        trailing:
-                            ClipOval(child: Image.asset("assets/user.jpg")),
+                        trailing: ClipOval(
+                            child: Image.asset(
+                          currentUser.imageUrl,
+                          height: height * 0.75,
+                        )),
                       ),
                       SizedBox(
                         height: 10,

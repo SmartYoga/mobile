@@ -106,7 +106,7 @@ class WorkoutScreen extends StatelessWidget {
                         leading: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: const Color(0xFF5B4D9D),
+                            color: const Color(0xFF625C83),
                           ),
                           padding: const EdgeInsets.all(6),
                           child: Image.asset(
