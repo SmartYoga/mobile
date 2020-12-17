@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:mobile/pages/chat/chat.dart';
 import 'package:mobile/pages/profile/start.dart';
-import 'package:mobile/pages/workout/workout.dart';
+import 'package:mobile/pages/workout/training.dart';
 
 void main() => runApp(MyApp());
 

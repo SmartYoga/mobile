@@ -22,7 +22,7 @@ class ProfileScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(top: height * 0.4),
               child: Container(
-                height: height * 0.55,
+                height: height * 0.65,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -36,24 +36,18 @@ class ProfileScreen extends StatelessWidget {
                         "Предстоящие тренеровки",
                         style: const TextStyle(
                             color: Colors.blueGrey,
-                            fontSize: 16,
+                            fontSize: 18,
                             fontWeight: FontWeight.w700),
                       ),
                     ),
+
+                    /// Карточки
                     Expanded(
                       flex: 2,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
                           children: <Widget>[
-                            Align(
-                              alignment: Alignment(0.8, -1.0),
-                              heightFactor: 0.5,
-                              child: FloatingActionButton(
-                                onPressed: null,
-                                child: Icon(Icons.add),
-                              ),
-                            ),
                             SizedBox(
                               width: 32,
                             ),
@@ -68,6 +62,7 @@ class ProfileScreen extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
+                    // Рекомендации
                     Expanded(
                       child: OpenContainer(
                         closedElevation: 0,
@@ -142,6 +137,20 @@ class ProfileScreen extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        bottom: 8,
+                        left: 32,
+                        right: 16,
+                      ),
+                      child: Text(
+                        "Новости",
+                        style: const TextStyle(
+                            color: Colors.blueGrey,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -197,6 +206,7 @@ class ProfileScreen extends StatelessWidget {
                         height: 10,
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: <Widget>[
                           _RadialProgress(
                             width: height * 0.2,
@@ -204,7 +214,7 @@ class ProfileScreen extends StatelessWidget {
                             progress: 0.7,
                           ),
                           SizedBox(
-                            width: 15,
+                            width: 10,
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -355,7 +365,7 @@ class _RadialProgress extends StatelessWidget {
                 ),
                 TextSpan(text: "\n"),
                 TextSpan(
-                  text: "ККАЛ",
+                  text: "ккал",
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w500,

@@ -28,16 +28,19 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Container(
-                      // Под логотип
-                      ),
+                    child: Image.asset(
+                      'assets/logo.png',
+                      scale: 3,
+                    ),
+                  ),
                   Text(
                     'Smart Yoga',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 60,
+                      fontSize: 40,
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 60),
 
                   // Контейнер текстого поля логина и пароля
                   Container(
