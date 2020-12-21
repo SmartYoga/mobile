@@ -24,37 +24,37 @@ final User currentUser = User(
 final User id1 = User(
   id: 1,
   name: 'Петя',
-  imageUrl: '',
+  imageUrl: 'assets/venya.jpg',
 );
 final User id2 = User(
   id: 2,
-  name: 'Коля',
-  imageUrl: '',
+  name: 'Юлия',
+  imageUrl: 'assets/julia.jpg',
 );
 final User id3 = User(
   id: 3,
   name: 'Андрей',
-  imageUrl: '',
+  imageUrl: 'assets/Ya.jpg',
 );
 final User id4 = User(
   id: 4,
   name: 'Лера',
-  imageUrl: '',
+  imageUrl: 'assets/lera.jpg',
 );
 final User id5 = User(
   id: 5,
   name: 'Катя',
-  imageUrl: '',
+  imageUrl: 'assets/katya.jpg',
 );
 final User id6 = User(
   id: 6,
-  name: 'Вадим Сергееич',
-  imageUrl: '',
+  name: 'Кристина',
+  imageUrl: 'assets/kris.jpg',
 );
 final User id7 = User(
   id: 7,
-  name: 'Steven',
-  imageUrl: '',
+  name: 'Стив',
+  imageUrl: 'assets/Semen.jpg',
 );
 
 // EXAMPLE CHATS ON HOME SCREEN
@@ -62,7 +62,7 @@ List<Message> chats = [
   Message(
     sender: id1,
     time: '5:30 PM',
-    text: 'Ух, устала сегодня',
+    text: 'Ух, устал сегодня',
   ),
   Message(
     sender: id2,

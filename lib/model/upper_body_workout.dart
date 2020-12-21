@@ -7,68 +7,68 @@ class UpperBodyWorkout {
 final upperBody = [
   [
     UpperBodyWorkout(
-      imagePath: "assets/chest.png",
+      imagePath: "assets/yoga.png",
       name: "Жим",
       instruction: "3 сета - 6 повторения",
     ),
     UpperBodyWorkout(
-      imagePath: "assets/chest.png",
+      imagePath: "assets/yoga.png",
       name: "Гантели",
       instruction: "4 сета1 - 6 повторения",
     ),
     UpperBodyWorkout(
-      imagePath: "assets/chest.png",
+      imagePath: "assets/yoga.png",
       name: "Отжимания",
       instruction: "2 сета - 10 повторения",
     ),
   ],
   [
     UpperBodyWorkout(
-      imagePath: "assets/back.png",
+      imagePath: "assets/run.png",
       name: "Подтягивания",
       instruction: "2 сета - 8 повторения",
     ),
     UpperBodyWorkout(
-      imagePath: "assets/back.png",
+      imagePath: "assets/run.png",
       name: "Тяга",
       instruction: "2 сета - 4 повторения",
     ),
     UpperBodyWorkout(
-      imagePath: "assets/back.png",
+      imagePath: "assets/run.png",
       name: "Тяга верхнего блока",
       instruction: "4 сета - 6 повторения",
     ),
   ],
   [
     UpperBodyWorkout(
-      imagePath: "assets/chest.png",
+      imagePath: "assets/yoga.png",
       name: "Жим лёжа",
       instruction: "3 сета - 6 повторения",
     ),
     UpperBodyWorkout(
-      imagePath: "assets/chest.png",
+      imagePath: "assets/yoga.png",
       name: "Пресс",
       instruction: "4 сета - 6 повторения",
     ),
     UpperBodyWorkout(
-      imagePath: "assets/chest.png",
+      imagePath: "assets/yoga.png",
       name: "Отжимания",
       instruction: "2 сета - 10 повторения",
     ),
   ],
   [
     UpperBodyWorkout(
-      imagePath: "assets/back.png",
+      imagePath: "assets/yoga.png",
       name: "Прыжки",
       instruction: "2 сета - 8 повторения",
     ),
     UpperBodyWorkout(
-      imagePath: "assets/back.png",
+      imagePath: "assets/yoga.png",
       name: "Тяга",
       instruction: "2 сета - 4 повторения",
     ),
     UpperBodyWorkout(
-      imagePath: "assets/back.png",
+      imagePath: "assets/yoga.png",
       name: "Пресс",
       instruction: "4 сета - 6 повторения",
     ),

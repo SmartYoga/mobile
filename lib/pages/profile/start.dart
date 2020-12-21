@@ -1,6 +1,7 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:mobile/model/client.dart';
 import 'package:mobile/model/meal.dart';
 import 'package:mobile/model/message.dart';
 import 'package:mobile/pages/profile/meal_detail_screen.dart';
@@ -42,8 +43,9 @@ class ProfileScreen extends StatelessWidget {
                     ),
 
                     /// Карточки
-                    Expanded(
-                      flex: 2,
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: 250,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
@@ -51,9 +53,9 @@ class ProfileScreen extends StatelessWidget {
                             SizedBox(
                               width: 32,
                             ),
-                            for (int i = 0; i < meals.length; i++)
+                            for (int i = 0; i < client.getMeal().length; i++)
                               _MealCard(
-                                meal: meals[i],
+                                meal: client.getMeal()[i],
                               ),
                           ],
                         ),
@@ -63,7 +65,9 @@ class ProfileScreen extends StatelessWidget {
                       height: 5,
                     ),
                     // Рекомендации
-                    Expanded(
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: 100,
                       child: OpenContainer(
                         closedElevation: 0,
                         transitionType: ContainerTransitionType.fade,
@@ -88,7 +92,7 @@ class ProfileScreen extends StatelessWidget {
                                         blurRadius: 10,
                                         color: Color(0xFFB3B3B3))
                                   ]),
-                              child: Expanded(
+                              child: Container(
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,

@@ -1,5 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile/model/client.dart';
 import 'package:mobile/pages/profile/meal_detail_screen.dart';
 import 'package:mobile/pages/workout/coaching.dart';
 import 'package:mobile/model/meal.dart';
@@ -34,39 +35,37 @@ class WorkoutPage extends StatelessWidget {
         ],
       ),
       body: Container(
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30.0),
-              topRight: Radius.circular(30.0),
-            ),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30.0),
+            topRight: Radius.circular(30.0),
           ),
-          child:
+        ),
+        child:
 
-              /// Карточки
-              Column(
-            children: [
-              SizedBox(height: 30),
-              Expanded(
-                flex: 2,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: <Widget>[
-                      SizedBox(
-                        width: 32,
+            /// Карточки
+            Column(
+          children: [
+            SizedBox(height: 30),
+            Expanded(
+              flex: 2,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget>[
+                    SizedBox(
+                      width: 32,
+                    ),
+                    for (int i = 0; i < client.getMeal().length; i++)
+                      _MealCard(
+                        meal: client.getMeal()[i],
                       ),
-                      for (int i = 0; i < meals.length; i++)
-                        _MealCard(
-                          meal: meals[i],
-                        ),
-                    ],
-                  ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
 
